@@ -16,60 +16,25 @@
       <h2>Use your keyboard. Hover for hints.</h2>
     </header>
     <section id="main">
-      <div class="nowplaying"></div>
-      <div class="keys">
-        <div data-key="65" class="key" data-note="C">
-            <span class="hints">A</span>
-        </div>
-        <div data-key="87" class="key sharp" data-note="C#">
-            <span class="hints">W</span>
-        </div>
-        <div data-key="83" class="key" data-note="D">
-            <span class="hints">S</span>
-        </div>
-        <div data-key="69" class="key sharp" data-note="D#">
-            <span class="hints">E</span>
-        </div>
-        <div data-key="68" class="key" data-note="E">
-            <span class="hints">D</span>
-        </div>
-        <div data-key="70" class="key" data-note="F">
-            <span class="hints">F</span>
-        </div>
-        <div data-key="84" class="key sharp" data-note="F#">
-            <span class="hints">T</span>
-        </div>
-        <div data-key="71" class="key" data-note="G">
-            <span class="hints">G</span>
-        </div>
-        <div data-key="89" class="key sharp" data-note="G#">
-            <span class="hints">Y</span>
-        </div>
-        <div data-key="72" class="key" data-note="A">
-            <span class="hints">H</span>
-        </div>
-        <div data-key="85" class="key sharp" data-note="A#">
-            <span class="hints">U</span>
-        </div>
-        <div data-key="74" class="key" data-note="B">
-            <span class="hints">J</span>
-        </div>
-        <div data-key="75" class="key" data-note="C">
-            <span class="hints">K</span>
-        </div>
-        <div data-key="79" class="key sharp" data-note="C#">
-            <span class="hints">O</span>
-        </div>
-        <div data-key="76" class="key" data-note="D">
-            <span class="hints">L</span>
-        </div>
-        <div data-key="80" class="key sharp" data-note="D#">
-            <span class="hints">P</span>
-        </div>
-        <div data-key="186" class="key" data-note="E">
-            <span class="hints">;</span>
-        </div>
-      </div>
+      <ul class="piano-keys">
+        <li class="key white" data-key="65"><span>a</span></li>
+        <li class="key black" data-key="87"><span>w</span></li>
+        <li class="key white" data-key="83"><span>s</span></li>
+        <li class="key black" data-key="69"><span>e</span></li>
+        <li class="key white" data-key="68"><span>d</span></li>
+        <li class="key white" data-key="70"><span>f</span></li>
+        <li class="key black" data-key="84"><span>t</span></li>
+        <li class="key white" data-key="71"><span>g</span></li>
+        <li class="key black" data-key="89"><span>y</span></li>
+        <li class="key white" data-key="72"><span>h</span></li>
+        <li class="key black" data-key="85"><span>u</span></li>
+        <li class="key white" data-key="74"><span>j</span></li>
+        <li class="key white" data-key="75"><span>k</span></li>
+        <li class="key black" data-key="79"><span>o</span></li>
+        <li class="key white" data-key="76"><span>l</span></li>
+        <li class="key black" data-key="80"><span>p</span></li>
+        <li class="key white" data-key="186"><span>;</span></li>
+      </ul>
 
       <audio data-key="65" src="note/C.wav"></audio>
       <audio data-key="87" src="note/C#.wav"></audio>
@@ -92,9 +57,6 @@
     
       </section>
   </section>
-  <video playsinline autoplay muted loop id="bgvid" poster="http://carolinegabriel.com/demo/js-keyboard/video/bg.jpg">
-      <source src="http://carolinegabriel.com/demo/js-keyboard/video/bg.mp4" type="video/mp4">
-  </video>
   </body>
 <!-- partial -->
   <script  src="./script.js"></script>
