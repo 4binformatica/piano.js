@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ita" >
+<html lang="it" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - JavaScript Piano</title>
+  <title>Piano</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js" integrity="sha512-jduERlz7En1IUZR54bqzpNI64AbffZWR//KJgF71SJ8D8/liKFZ+s1RxmUmB+bhCnIfzebdZsULwOrbVB5f3nQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 <body>
@@ -19,49 +20,49 @@
     <section id="main">
       <div class="nowplaying"></div>
       <ul class="piano-keys">
-        <li class="key white" data-key="65"><span>a</span></li>
-        <li class="key black" data-key="87"><span>w</span></li>
-        <li class="key white" data-key="83"><span>s</span></li>
-        <li class="key black" data-key="69"><span>e</span></li>
-        <li class="key white" data-key="68"><span>d</span></li>
-        <li class="key white" data-key="70"><span>f</span></li>
-        <li class="key black" data-key="84"><span>t</span></li>
-        <li class="key white" data-key="71"><span>g</span></li>
-        <li class="key black" data-key="89"><span>y</span></li>
-        <li class="key white" data-key="72"><span>h</span></li>
-        <li class="key black" data-key="85"><span>u</span></li>
-        <li class="key white" data-key="74"><span>j</span></li>
-        <li class="key white" data-key="75"><span>k</span></li>
-        <li class="key black" data-key="79"><span>o</span></li>
-        <li class="key white" data-key="76"><span>l</span></li>
-        <li class="key black" data-key="80"><span>p</span></li>
-        <li class="key white" data-key="186"><span>;</span></li>
+        <li class="key white d"><span>d</span></li>
+        <li class="key black w"><span>w</span></li>
+        <li class="key white f"><span>f</span></li>
+        <li class="key black e"><span>e</span></li>
+        <li class="key white g"><span>g</span></li>
+        <li class="key white h"><span>h</span></li>
+        <li class="key black r"><span>r</span></li>
+        <li class="key white j"><span>j</span></li>
+        <li class="key black t"><span>t</span></li>
+        <li class="key white k"><span>k</span></li>
+        <li class="key black y"><span>y</span></li>
+        <li class="key white l"><span>l</span></li>
+        <li class="key white c"><span>c</span></li>
+        <li class="key black u"><span>u</span></li>
+        <li class="key white v"><span>v</span></li>
+        <li class="key black i"><span>i</span></li>
+        <li class="key white b"><span>b</span></li>
       </ul>
 
-      <audio data-key="65" src="note/C.wav"></audio>
+     <!--  <audio data-key="68" src="note/C.wav"></audio>
       <audio data-key="87" src="note/C#.wav"></audio>
-      <audio data-key="83" src="note/D.wav"></audio>
+      <audio data-key="70" src="note/D.wav"></audio>
       <audio data-key="69" src="note/D#.wav"></audio>
-      <audio data-key="68" src="note/E.wav"></audio>
-      <audio data-key="70" src="note/F.wav"></audio>
-      <audio data-key="84" src="note/F#.wav"></audio>
-      <audio data-key="71" src="note/G.wav"></audio>
-      <audio data-key="89" src="note/G#.wav"></audio>
-      <audio data-key="72" src="note/A.wav"></audio>
-      <audio data-key="85" src="note/A#.wav"></audio>
-      <audio data-key="74" src="note/B.wav"></audio>
-      <audio data-key="75" src="note/C5.wav"></audio>
-      <audio data-key="79" src="note/C#5.wav"></audio>
-      <audio data-key="76" src="note/D5.wav"></audio>
-      <audio data-key="80" src="note/D#5.wav"></audio>
-      <audio data-key="186"src="note/E5.wav"></audio>
+      <audio data-key="71" src="note/E.wav"></audio>
+      <audio data-key="72" src="note/F.wav"></audio>
+      <audio data-key="82" src="note/F#.wav"></audio>
+      <audio data-key="74" src="note/G.wav"></audio>
+      <audio data-key="84" src="note/G#.wav"></audio>
+      <audio data-key="75" src="note/A.wav"></audio>
+      <audio data-key="89" src="note/A#.wav"></audio>
+      <audio data-key="76" src="note/B.wav"></audio>
+      <audio data-key="67" src="note/C5.wav"></audio>
+      <audio data-key="85" src="note/C#5.wav"></audio>
+      <audio data-key="86" src="note/D5.wav"></audio>
+      <audio data-key="73" src="note/D#5.wav"></audio>
+      <audio data-key="66"src="note/E5.wav"></audio> -->
 
     
       </section>
   </section>
   </body>
 <!-- partial -->
-  <script  src="./script.js"></script>
+  <script  src="script.js"></script>
 
 </body>
 </html>

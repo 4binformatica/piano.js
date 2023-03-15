@@ -12,6 +12,7 @@ html  {
       justify-content: center;
       min-height: 100vh;
       background: #e3f2fd;
+      overflow: hidden;
     } 
 
     header {
@@ -50,7 +51,7 @@ html  {
       font-size: 120px;
       line-height: 1;
       color: #000;
-      text-shadow: 0 0 5rem #028ae9;
+      /* text-shadow: 0 0 5rem #028ae9; */
       transition: all .07s ease;
       min-height: 120px;
     }
@@ -68,27 +69,27 @@ html  {
       margin-top: 40px;
     }
 
-    .piano-keys .key{
+    .piano-keys .key {
       list-style: none;
       color: #a2a2a2;
       text-transform: uppercase;
     }
 
-    .piano-keys .black{
+    .piano-keys .black {
       width: 44px;
       height: 140px;
       margin: 0 -22px 0 -22px;
       border-radius: 0 0 5px 5px;
-      background: linear-gradient(#333, #000);
+      /* background: linear-gradient(#333, #000); */
       z-index: 2;
     }
 
-    .piano-keys .white{
+    .piano-keys .white {
       width: 70px;
       height: 230px;
       border-radius: 8px;
       border: 1px solid #000;
-      background: linear-gradient(#fff 96%, #eee 4%);
+      /* background: linear-gradient(#fff 96%, #eee 4%); */
     }
 
     .piano-keys .black span{
@@ -107,8 +108,16 @@ html  {
       color: #000;
     }
 
-    .playing {
+    /* .playing {
       transform: scale(.95);
       border-color: #028ae9;
       box-shadow: 0 0 1rem #028ae9;
+    } */
+
+    .d, .f, .g, .h, .j, .k, .l, .c, .v, .b{
+      background-color: rgb(230, 230, 230) !important;
+    }
+
+    .w, .e, .r, .t, .y, .u, .i {
+      background-color: rgb(10, 10, 10) !important;
     }
