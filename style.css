@@ -115,9 +115,9 @@ html  {
     } */
 
     .d, .f, .g, .h, .j, .k, .l, .c, .v, .b{
-      background-color: rgb(230, 230, 230) !important;
+      background: rgb(230, 230, 230) !important;
     }
 
     .w, .e, .r, .t, .y, .u, .i {
-      background-color: rgb(10, 10, 10) !important;
+      background: rgb(10, 10, 10) !important;
     }

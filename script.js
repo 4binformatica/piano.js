@@ -45,11 +45,27 @@ function playSound(note) {
   document.getElementById(note.replace("#", "S")).style.background = "#33d6a6";
 }
 
+/* document.addEventListener('keydown', (event) => {
+  var name = event.key;
+  var code = event.code;
+  if (name === 'Shift') {
+    // Do nothing.
+    return;
+  }
+  if (event.shiftKey) {
+    //alert(`Combination of shiftKey + ${name} \n Key code Value: ${code}`);
+    document.getElementById(".black").style.background = "red";
+  } else {
+    //alert(`Key pressed ${name} \n Key code Value: ${code}`);
+  }
+}, false); */
+
 function getNote(key) {
   let note = "N/A";
   switch (key) {
     case "KeyS":
       note = "C";
+      document.getElementById(".d");
       if (shift_pressed) note += "#";
       break;
     case "KeyD":
