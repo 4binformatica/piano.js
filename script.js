@@ -42,30 +42,15 @@ document.onkeyup = function (e) {
 
 function playSound(note) {
   synths.triggerAttack(`${note}${current_section}`, "1");
+
   document.getElementById(note.replace("#", "S")).style.background = "#33d6a6";
 }
-
-/* document.addEventListener('keydown', (event) => {
-  var name = event.key;
-  var code = event.code;
-  if (name === 'Shift') {
-    // Do nothing.
-    return;
-  }
-  if (event.shiftKey) {
-    //alert(`Combination of shiftKey + ${name} \n Key code Value: ${code}`);
-    document.getElementById(".black").style.background = "red";
-  } else {
-    //alert(`Key pressed ${name} \n Key code Value: ${code}`);
-  }
-}, false); */
 
 function getNote(key) {
   let note = "N/A";
   switch (key) {
     case "KeyS":
       note = "C";
-      document.getElementById(".d");
       if (shift_pressed) note += "#";
       break;
     case "KeyD":
@@ -90,48 +75,12 @@ function getNote(key) {
     case "KeyK":
       note = "B";
       break;
+    //Non toccare mai questo codice se non sai cosa stai facendo
      case "KeyL":
-      note = "C";
+      note = synths.triggerAttack(`C${current_section + 1}`, "1");
+      synths.triggerRelease();
       if (shift_pressed) note += "#";
       break;
   }
   return note;
 }
-
-
-
-
-
-
-/* const keys = document.querySelectorAll(".key"),
-  note = document.querySelector(".nowplaying"),
-  hints = document.querySelectorAll(".hints");
-
-function playNote(e) {
-  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
-    key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-
-  if (!key) return;
-
-  const keyNote = key.getAttribute("data-note");
-
-  key.classList.add("playing");
-  note.innerHTML = keyNote;
-  audio.currentTime = 0;
-  audio.play();
-}
-
-function removeTransition(e) {
-  if (e.propertyName !== "transform") return;
-  this.classList.remove("playing");
-}
-
-function hintsOn(e, index) {
-  e.setAttribute("style", "transition-delay:" + index * 50 + "ms");
-}
-
-hints.forEach(hintsOn);
-
-keys.forEach(key => key.addEventListener("transitionend", removeTransition));
-
-window.addEventListener("keydown", playNote); */
