@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js" integrity="sha512-jduERlz7En1IUZR54bqzpNI64AbffZWR//KJgF71SJ8D8/liKFZ+s1RxmUmB+bhCnIfzebdZsULwOrbVB5f3nQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -19,27 +19,27 @@
     </header>
     <section id="main">
       <div class="nowplaying"></div>
-      <ul class="piano-keys">
-        <li class="key white d"><span>d</span></li>
-        <li class="key black w"><span>w</span></li>
-        <li class="key white f"><span>f</span></li>
-        <li class="key black e"><span>e</span></li>
-        <li class="key white g"><span>g</span></li>
-        <li class="key white h"><span>h</span></li>
-        <li class="key black r"><span>r</span></li>
-        <li class="key white j"><span>j</span></li>
-        <li class="key black t"><span>t</span></li>
-        <li class="key white k"><span>k</span></li>
-        <li class="key black y"><span>y</span></li>
-        <li class="key white l"><span>l</span></li>
-        <li class="key white c"><span>c</span></li>
-        <li class="key black u"><span>u</span></li>
-        <li class="key white v"><span>v</span></li>
-        <li class="key black i"><span>i</span></li>
-        <li class="key white b"><span>b</span></li>
+      <ul class="piano-keys" onkeypress="KeysAnimation()">
+        <li class="key white d"><span>s</span></li>
+        <li class="key black w"><span>e</span></li>
+        <li class="key white f"><span>d</span></li>
+        <li class="key black e"><span>r</span></li>
+        <li class="key white g"><span>f</span></li>
+        <li class="key white h"><span>g</span></li>
+        <li class="key black r"><span>y</span></li>
+        <li class="key white j"><span>h</span></li>
+        <li class="key black t"><span>u</span></li>
+        <li class="key white k"><span>j</span></li>
+        <li class="key black y"><span>i</span></li>
+        <li class="key white l"><span>k</span></li>
+        <li class="key white c"><span>l</span></li>
+        <li class="key black u"><span>o</span></li>
+        <li class="key white v"><span>c</span></li>
+        <li class="key black i"><span>p</span></li>
+        <li class="key white b"><span>v</span></li>
       </ul>
 
-     <!--  <audio data-key="68" src="note/C.wav"></audio>
+     <!-- <audio data-key="68" src="note/C.wav"></audio>
       <audio data-key="87" src="note/C#.wav"></audio>
       <audio data-key="70" src="note/D.wav"></audio>
       <audio data-key="69" src="note/D#.wav"></audio>
