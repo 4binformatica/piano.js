@@ -10,7 +10,9 @@ document.onkeydown = function (e) {
   let note = getNote(key);
   switch (key) {
     case "ShiftRight":
-    case "ShiftLeft":
+    case
+
+ "ShiftLeft":
       shift_pressed = true;
       break;
     case "ArrowRight":
@@ -146,3 +148,95 @@ function animateWhiteKeys() {
 function animateBlackKeys() {
 }
 
+//Metronome Sound
+
+/* const bpmValue = document.querySelector('.value');
+const minButton = document.querySelector('.min');
+const maxButton = document.querySelector('.max');
+let bpm = parseInt(bpmValue.textContent);
+
+const clickSound = new Tone.MembraneSynth().toDestination();
+const loop = new Tone.Loop((time) => {
+  clickSound.triggerAttackRelease('C2', '8n', time);
+}, '4n').start(0);
+
+document.querySelector('.start').addEventListener('click', () => {
+  const intervalMs = 60000 / bpm;
+
+  loop.interval = intervalMs / 1000;
+
+  Tone.Transport.start();
+
+  document.querySelector('.start').style.display = 'none';
+  document.querySelector('.stop').style.display = 'block';
+});
+
+document.querySelector('.stop').addEventListener('click', () => {
+  Tone.Transport.stop();
+
+  document.querySelector('.start').style.display = 'block';
+  document.querySelector('.stop').style.display = 'none';
+});
+
+minButton.addEventListener('click', () => {
+  bpm--;
+  if (bpm < parseInt(bpmValue.min)) {
+    bpm = parseInt(bpmValue.min);
+  }
+  bpmValue.textContent = bpm;
+});
+
+maxButton.addEventListener('click', () => {
+  bpm++;
+  if (bpm > parseInt(bpmValue.max)) {
+    bpm = parseInt(bpmValue.max);
+  }
+  bpmValue.textContent = bpm;
+}); */
+
+
+const audio = new Audio('note/topolino.mp3');
+let interval;
+
+const bpmValue = document.querySelector('.value');
+const minButton = document.querySelector('.min');
+const maxButton = document.querySelector('.max');
+let bpm = parseInt(bpmValue.textContent);
+
+document.querySelector('.start').addEventListener('click', () => {
+  const intervalMs = 60000 / bpm;
+
+  interval = setInterval(() => {
+    audio.currentTime = 0;
+    audio.play();
+  }, intervalMs);
+
+  document.querySelector('.start').style.display = 'none';
+  document.querySelector('.stop').style.display = 'block';
+});
+
+document.querySelector('.stop').addEventListener('click', () => {
+  clearInterval(interval);
+
+  audio.pause();
+  audio.currentTime = 0;
+
+  document.querySelector('.start').style.display = 'block';
+  document.querySelector('.stop').style.display = 'none';
+});
+
+minButton.addEventListener('click', () => {
+  bpm--;
+  if (bpm < parseInt(bpmValue.min)) {
+    bpm = parseInt(bpmValue.min);
+  }
+  bpmValue.textContent = bpm;
+});
+
+maxButton.addEventListener('click', () => {
+  bpm++;
+  if (bpm > parseInt(bpmValue.max)) {
+    bpm = parseInt(bpmValue.max);
+  }
+  bpmValue.textContent = bpm;
+});

@@ -1,139 +1,205 @@
 html  {
         
-        font-family: 'Noto Serif', serif;
-        -webkit-font-smoothing: antialiased;
-        text-align: center;
-      }
-    
-      
-    body{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: #e3f2fd;
-      overflow: hidden;
-    } 
+  font-family: 'Noto Serif', serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
 
-    header {
-      position: relative;
-      margin: 30px 0;
-    }
 
-    header:after {
-      content: '';
-      width: 460px;
-      height: 15px;
-      
-      display: inline-block;
-      text-align: center;
-      background-size: 70%;
-    }
+body{
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+background: #e3f2fd;
+overflow: hidden;
+} 
+
+header {
+position: relative;
+margin: 30px 0;
+}
+
+header:after {
+content: '';
+width: 460px;
+height: 15px;
+
+display: inline-block;
+text-align: center;
+background-size: 70%;
+}
 /* 
-    h1 {
-      color: #000;
-      font-size: 50px;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin: 0;
-    }
+h1 {
+color: #000;
+font-size: 50px;
+font-weight: 400;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+margin: 0;
+}
 
-    h2 {
-      color: #000;
-      font-size: 24px;
-      font-style: italic;
-      font-weight: 400;
-      margin: 0 0 30px;
-    } */
+h2 {
+color: #000;
+font-size: 24px;
+font-style: italic;
+font-weight: 400;
+margin: 0 0 30px;
+} */
 
-    .nowplaying {
-      font-size: 120px;
-      line-height: 1;
-      color: #000;
-      /* text-shadow: 0 0 5rem #028ae9; */
-      transition: all .07s ease;
-      min-height: 120px;
-    }
+.nowplaying {
+font-size: 120px;
+line-height: 1;
+color: #000;
+/* text-shadow: 0 0 5rem #028ae9; */
+transition: all .07s ease;
+min-height: 120px;
+}
 
-    #main{
-      width: 780px;
-      border-radius: 20px;
-      padding: 35px 40px;
-      background: #141414;
-      box-shadow: 0 0 1rem #000;
-    }
+#main{
+width: 780px;
+border-radius: 20px;
+padding: 35px 40px;
+background: #141414;
+box-shadow: 0 0 1rem #000;
+}
 
-    .piano-keys {
-      display: flex;
-      margin-top: 40px;
-    }
+.piano-keys {
+display: flex;
+margin-top: 40px;
+}
 
-    .piano-keys .key {
-      list-style: none;
-      color: #a2a2a2;
-      text-transform: uppercase;
-    }
+.piano-keys .key {
+list-style: none;
+color: #a2a2a2;
+text-transform: uppercase;
+}
 
-    .piano-keys .black {
-      width: 44px;
-      height: 140px;
-      margin: 0 -22px 0 -22px;
-      border-radius: 0 0 5px 5px;
-      /* background: linear-gradient(#333, #000); */
-      z-index: 2;
-    }
+.piano-keys .black {
+width: 44px;
+height: 140px;
+margin: 0 -22px 0 -22px;
+border-radius: 0 0 5px 5px;
+/* background: linear-gradient(#333, #000); */
+z-index: 2;
+}
 
-    .piano-keys .white {
-      width: 70px;
-      height: 230px;
-      border-radius: 8px;
-      border: 1px solid #000;
-      /* background: linear-gradient(#fff 96%, #eee 4%); */
-    }
+.piano-keys .white {
+width: 70px;
+height: 230px;
+border-radius: 8px;
+border: 1px solid #000;
+/* background: linear-gradient(#fff 96%, #eee 4%); */
+}
 
-    .piano-keys .black span{
-      left: 0;
-      position: relative;
-      top: 90px;
-      width: 100%;
-      color: #fff;
-    }
+.piano-keys .black span{
+left: 0;
+position: relative;
+top: 90px;
+width: 100%;
+color: #fff;
+}
 
-    .piano-keys .white span{
-      left: 0;
-      position: relative;
-      top: 180px;
-      width: 100%;
-      color: #000;
-    }
+.piano-keys .white span{
+left: 0;
+position: relative;
+top: 180px;
+width: 100%;
+color: #000;
+}
 
-     /* .playing {
-      transform: scale(.95);
-      border-color: #028ae9;
-      box-shadow: 0 0 1rem #028ae9;
-    } */
+/* .playing {
+transform: scale(.95);
+border-color: #028ae9;
+box-shadow: 0 0 1rem #028ae9;
+} */
 
-    /* .s, .d, .f, .g, .h, .j, .k, .l, .c, .v{
-      background: rgb(230, 230, 230) !important;
-    }
+/* .s, .d, .f, .g, .h, .j, .k, .l, .c, .v{
+background: rgb(230, 230, 230) !important;
+}
 
-    .e, .r, .y, .u, .i, .o, .p {
-      background: rgb(10, 10, 10) !important;
-    } */
+.e, .r, .y, .u, .i, .o, .p {
+background: rgb(10, 10, 10) !important;
+} */
 
-    .d, .f, .g, .h, .j, .k, .l, .c, .v, .b{
-      background: rgb(230, 230, 230) !important;
-    }
+.d, .f, .g, .h, .j, .k, .l, .c, .v, .b{
+background: rgb(230, 230, 230) !important;
+}
 
-    .w, .e, .r, .t, .y, .u, .i {
-      background: rgb(10, 10, 10) !important;
-    }
+.w, .e, .r, .t, .y, .u, .i {
+background: rgb(10, 10, 10) !important;
+}
 
-    /*add an animation to the keys*/
-    .piano-key.white.playing {
-      background-color: #33d6a6;
-      transition: background-color 0.1s linear;
-    }
-    
+/*add an animation to the keys*/
+.piano-key.white.playing {
+background-color: #33d6a6;
+transition: background-color 0.1s linear;
+}
 
+.metronome {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 300px;
+font-size: 24px;
+}
+
+.click {
+width: 50px;
+height: 50px;
+background-color: #c2b9b9;
+border-radius: 50%;
+}
+
+.bpm {
+margin-top: 20px;
+font-size: 16px;
+}
+
+.slider {
+width: 200px;
+margin-right: 10px;
+}
+
+.start,
+.stop {
+margin-top: 10px;
+padding: 10px 20px;
+font-size: 13px;
+background-color: rgb(230, 230, 230);
+color: #000000;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+}
+
+.stop {
+display: none;
+}
+
+.bpm1 {
+border: #33d6a6 1px solid;
+width: 30%;
+height: auto;
+}
+
+.min{
+width: 30px;
+height: 30px;
+border-radius: 25px;
+}
+
+.max{
+width: 30px;
+height: 30px;
+border-radius: 25px;
+}
+
+.value{
+color: white;
+}
+
+.bpm2{
+color: white;
+}
