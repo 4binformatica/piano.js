@@ -148,7 +148,7 @@ font-size: 24px;
 .click {
 width: 50px;
 height: 50px;
-background-color: #c2b9b9;
+/* background-color: #c2b9b9; */
 border-radius: 50%;
 }
 
@@ -179,7 +179,7 @@ display: none;
 }
 
 .bpm1 {
-border: #33d6a6 1px solid;
+/* border: #33d6a6 1px solid; */
 width: 30%;
 height: auto;
 }
