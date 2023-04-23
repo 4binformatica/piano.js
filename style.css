@@ -210,11 +210,11 @@ color: white;
 
 .metronomoPNG{
 position: relative;
-width: 80px;
-height: 170px;
+width: 55px;
+height: 80px;
 right: 5px;
-bottom: 100px;
-right: 13px;
+bottom: 25px;
+left: -3px;
 }
 
 .imageSong{
@@ -224,3 +224,20 @@ right: 13px;
   left: 100px;
   top: 10px;
 }
+
+#preview-image {
+  position: relative;
+  width: 550px;
+  height: 250px;
+  left: 100px;
+  top: 10px;
+  background-color: #1d1c1c;
+}
+
+input[type="file"] {
+  position: absolute;
+  left: 900px;
+  top: 390px;
+  margin-top: 20px;
+} 
+
