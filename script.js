@@ -279,3 +279,23 @@ maxButton.addEventListener('click', () => {
   }
   bpmValue.textContent = bpm;
 });
+
+//image preview
+const fileInput = document.getElementById('file-input');
+const previewImage = document.getElementById('preview-image');
+
+fileInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener('load', (event) => {
+    previewImage.src = event.target.result;
+    fileInput.parentNode.removeChild(fileInput);
+  });
+
+  reader.readAsDataURL(file);
+});
+
+previewImage.addEventListener('click', () => {
+  fileInput.click();
+});
