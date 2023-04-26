@@ -49,6 +49,8 @@ let current_section = 4;
 document.onkeydown = function (e) {
   let key = e.code;
   let note = getNote(key);
+  /* console.log("ba");
+  console.log(note); */
   switch (key) {
     case "ShiftRight":
     case
@@ -74,9 +76,15 @@ document.onkeydown = function (e) {
 
 document.onkeyup = function (e) {
   let key = e.code;
-  note = getNote(key);
-  if (!note.endsWith("#"))
+  /* note = getNote(key); */
+  if (!note.endsWith("#")){
+    /* var a = document.getElementById(note);
+    console.log("passo di qui");
+    console.log(a);
+    console.log(note);
+    console.log("passato"); */
     document.getElementById(note).style.background = "white";
+  }
   else
     document.getElementById(note.replace("#", "S")).style.background = "black";
 };
@@ -99,6 +107,7 @@ function playSound(note) {
 
 function getNote(key) {
   let note = "N/A";
+  console.log(key);
   switch (key) {
     case "KeyS":
       note = "C";
@@ -167,9 +176,76 @@ function getNote(key) {
         synths.triggerRelease();
         //if (shift_pressed) note += "#";
         break;
-  }
+  } 
   return note;
 }
+
+/* function getNoteById(id) {
+  let note = "N/A";
+  console.log(id);
+  switch (id) {
+    case "keyS":
+      note = "C";
+      break;
+    case "keyE":
+      note = "C" + "#";
+      break;
+    case "keyD":
+      note = "D";
+      break;
+    case "keyR":
+      note = "D" + "#";
+      break;
+    case "keyF":
+      note = "E";
+      break;
+    case "keyG":
+      note = "F";
+      break;
+    case "keyY":
+      note = "F" + "#";
+      break;
+    case "keyH":
+      note = "G";
+      break;
+    case "keyU":
+      note = "G" + "#";
+      break;
+    case "keyJ":
+      note = "A";
+      break;
+    case "keyI":
+      note = "A" + "#";
+      break;
+    case "keyK":
+      note = "B";
+      break;
+    case "keyL":
+      note = synths.triggerAttack(`C${current_section + 1}`, "1");
+      synths.triggerRelease();
+      break;
+    case "keyO":
+      note = "C" + "#";
+      note = synths.triggerAttack(`${note}${current_section + 1}`, "1");
+      synths.triggerRelease();
+      break;
+    case "keyC":
+      note = synths.triggerAttack(`D${current_section + 1}`, "1");
+      synths.triggerRelease();
+      break;
+    case "keyP":
+      note = "D" + "#";
+      note = synths.triggerAttack(`D#${current_section + 1}`, "1");
+      synths.triggerRelease();
+      break;
+    case "keyV":
+      note = synths.triggerAttack(`E${current_section + 1}`, "1");
+      synths.triggerRelease();
+      break;
+  }
+  return note;
+} */
+
 
 //animation keys
 function KeysAnimation(){

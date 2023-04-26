@@ -11,9 +11,25 @@ display: flex;
 align-items: center;
 justify-content: center;
 min-height: 100vh;
-background: #e3f2fd;
+background: linear-gradient(-90deg, #2f00ff, #d254f1, #26be00, #ffd000, #d60b0b, #ff00ff, #01e0fd);
+background-size: 400% 400%;
+width: 100%;
+height: 100vh;
+animation: animate 25s ease infinite;
 overflow: hidden;
 } 
+
+@keyframes animate{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
 
 header {
 position: relative;
@@ -53,7 +69,9 @@ line-height: 1;
 color: #000;
 /* text-shadow: 0 0 5rem #028ae9; */
 transition: all .07s ease;
-min-height: 120px;
+/* min-height: 120px; */
+height: 170px;
+/* border: 2px solid green; */
 }
 
 #main{
@@ -62,6 +80,7 @@ border-radius: 20px;
 padding: 35px 40px;
 background: #141414;
 box-shadow: 0 0 1rem #000;
+/* border: 2px solid purple; */
 }
 
 .piano-keys {
@@ -81,6 +100,7 @@ height: 140px;
 margin: 0 -22px 0 -22px;
 border-radius: 0 0 5px 5px;
 /* background: linear-gradient(#333, #000); */
+/* border: 2px solid yellow; */
 z-index: 2;
 }
 
@@ -89,7 +109,7 @@ width: 70px;
 height: 230px;
 border-radius: 8px;
 border: 1px solid #000;
-/* background: linear-gradient(#fff 96%, #eee 4%); */
+/* border: 2px solid red; */
 }
 
 .piano-keys .black span{
@@ -106,6 +126,7 @@ position: relative;
 top: 180px;
 width: 100%;
 color: #000;
+/* border: 2px solid red; */
 }
 
 /* .playing {
@@ -180,12 +201,11 @@ display: none;
 
 .bpm1 {
 /* border: #33d6a6 1px solid; */
-position: absolute;
-width: 30%;
+position: relative;
+width:20%;
 height: auto;
-bottom: 370px;
-right: 905px;
-
+/* top: 20px; */
+left: 30px;
 }
 
 .min{
@@ -239,12 +259,14 @@ left: -3px;
 }
 
 .imageSongDiv{
+  /* border: 1px solid #0000ff; */
   position: relative;
+  /* bottom: 300px; */
   max-width: 550px;
   width: 560px;
   height: 200px;
   left: 200px;
-  top: 10px;
+  bottom: 190px;
   overflow-y: scroll;
   overflow-x: hidden;
 }

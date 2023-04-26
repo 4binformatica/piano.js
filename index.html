@@ -15,15 +15,14 @@
   <section id="wrap">
 
     <header>
-      <h1>Pianoforte in JS</h1>
-      <h2>Use your keyboard. Hover for hints.</h2>
+     
     </header>
     <section id="main">
       <div class="nowplaying">
         <div class="bpm1">
           <!-- <audio id="click">
             <source src="note/pippo.mp3" type="audio/mpeg">
-          </audio> -->
+          </audio> --> 
           
           <div class="metronome">
             
@@ -35,13 +34,13 @@
             <div class="bpm">
               <!-- <input type="range" min="40" max="240" value="120" class="slider"> -->
               <button class="min">-</button>
-              <span class="value">120</span> <span class="bpm2">BPM</span>
+              <span class="value">100</span> <span class="bpm2">BPM</span>
               <button class="max">+</button>
             </div>
             <button class="start">Start</button>
             <button class="stop">Stop</button>
           </div>
-          
+    
         </div>
         <div class="imageSongDiv">
           <img id="preview-image">
@@ -52,23 +51,23 @@
         <script  src="script.js"></script>
       </div>
       <ul class="piano-keys" onkeypress="KeysAnimation()">
-        <li class="key white d"><span>s</span></li>
-        <li class="key black w"><span>e</span></li>
-        <li class="key white f"><span>d</span></li>
-        <li class="key black e"><span>r</span></li>
-        <li class="key white g"><span>f</span></li>
-        <li class="key white h"><span>g</span></li>
-        <li class="key black r"><span>y</span></li>
-        <li class="key white j"><span>h</span></li>
-        <li class="key black t"><span>u</span></li>
-        <li class="key white k"><span>j</span></li>
-        <li class="key black y"><span>i</span></li>
-        <li class="key white l"><span>k</span></li>
-        <li class="key white c"><span>l</span></li>
-        <li class="key black u"><span>o</span></li>
-        <li class="key white v"><span>c</span></li>
-        <li class="key black i"><span>p</span></li>
-        <li class="key white b"><span>v</span></li>
+        <li id="keyS" class="key white d"><span>s</span></li>
+        <li id="keyE" class="key black w"><span>e</span></li>
+        <li id="keyD" class="key white f"><span>d</span></li>
+        <li id="keyR" class="key black e"><span>r</span></li>
+        <li id="keyF" class="key white g"><span>f</span></li>
+        <li id="keyG" class="key white h"><span>g</span></li>
+        <li id="keyY" class="key black r"><span>y</span></li>
+        <li id="keyH" class="key white j"><span>h</span></li>
+        <li id="keyU" class="key black t"><span>u</span></li>
+        <li id="keyJ" class="key white k"><span>j</span></li>
+        <li id="keyI" class="key black y"><span>i</span></li>
+        <li id="keyK" class="key white l"><span>k</span></li>
+        <li id="keyL" class="key white c"><span>l</span></li>
+        <li id="keyO" class="key black u"><span>o</span></li>
+        <li id="keyC" class="key white v"><span>c</span></li>
+        <li id="keyP" class="key black i"><span>p</span></li>
+        <li id="keyV" class="key white b"><span>v</span></li>
       </ul>
 
      <!-- <audio data-key="68" src="note/C.wav"></audio>
