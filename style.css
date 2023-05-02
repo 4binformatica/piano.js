@@ -200,7 +200,7 @@ display: none;
 }
 
 .bpm1 {
-/* border: #33d6a6 1px solid; */
+/* border: #33d6a6 1px solid;  */
 position: relative;
 width:20%;
 height: auto;
@@ -209,15 +209,51 @@ left: 30px;
 }
 
 .min{
+position: relative;
 width: 30px;
 height: 30px;
 border-radius: 25px;
+right: 30px;
+}
+
+.bpm-input , .bpm-input:active{
+  position: relative;
+  right: 30px;
+  width: 25px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bpm-text{
+  position: relative;
+  color: white;
+  font-size: 14px;
+  left: 73px;
+  bottom: 59px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .max{
+position: relative;
 width: 30px;
 height: 30px;
 border-radius: 25px;
+left: 4px;
+}
+
+.start{
+position: relative;
+top: 35px;
+right: 100px;
 }
 
 .value{
@@ -227,6 +263,8 @@ color: white;
 .bpm2{
 color: white;
 }
+
+
 
 .metronomoPNG{
 position: relative;
@@ -269,6 +307,7 @@ left: -3px;
   bottom: 190px;
   overflow-y: scroll;
   overflow-x: hidden;
+  cursor: pointer;
 }
 
 .imageSongDiv::-webkit-scrollbar-track
@@ -296,3 +335,27 @@ input[type="file"] {
   margin-top: 20px;
 } 
 
+.playing{
+  color: #33d6a6;
+}
+
+
+.GitHub{
+  position: relative;
+  left: 750px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.github-link{
+  text-decoration: none;
+}
+
+.github-link i {
+  color: white;
+}

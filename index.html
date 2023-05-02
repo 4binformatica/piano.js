@@ -1,98 +1,133 @@
-<!DOCTYPE html>
-<html lang="it" >
-<head>
-  <meta charset="UTF-8">
-  <title>Piano</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js" integrity="sha512-jduERlz7En1IUZR54bqzpNI64AbffZWR//KJgF71SJ8D8/liKFZ+s1RxmUmB+bhCnIfzebdZsULwOrbVB5f3nQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<body>
-  <section id="wrap">
+  <!DOCTYPE html>
+  <html lang="it" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Piano</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js" integrity="sha512-jduERlz7En1IUZR54bqzpNI64AbffZWR//KJgF71SJ8D8/liKFZ+s1RxmUmB+bhCnIfzebdZsULwOrbVB5f3nQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+  <!-- partial:index.partial.html -->
+  <body>
 
-    <header>
-     
-    </header>
-    <section id="main">
-      <div class="nowplaying">
-        <div class="bpm1">
-          <!-- <audio id="click">
-            <source src="note/pippo.mp3" type="audio/mpeg">
-          </audio> --> 
-          
-          <div class="metronome">
-            
-            <div class="click">
-                <!-- <i class="fa-light fa-triangle-instrument fa-flip" style="color: #ffffff;"></i> -->
-                <i class="fa-light fa-triangle-instrument fa-flip" style="color: #ffffff;"></i>
-                <img src="images/metronome.png" alt="immagine di un metronomo" class="metronomoPNG">
-            </div>
-            <div class="bpm">
-              <!-- <input type="range" min="40" max="240" value="120" class="slider"> -->
-              <button class="min">-</button>
-              <span class="value">100</span> <span class="bpm2">BPM</span>
-              <button class="max">+</button>
-            </div>
-            <button class="start">Start</button>
-            <button class="stop">Stop</button>
+    
+
+    <section id="wrap">
+      
+      <header>
+      
+      </header>
+
+      <section id="main">
+        
+        <div class="aboutUs">
+          <div class="GitHub">
+            <a class="github-link" href="https://github.com/4binformatica/piano.js/tree/main" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            </i>
           </div>
-    
         </div>
-        <div class="imageSongDiv">
-          <img id="preview-image">
-          <input type="file" id="file-input" accept="image/*" style="display:none;">
-        </div>
-        </body>
-      <!-- partial -->
-        <script  src="script.js"></script>
-      </div>
-      <ul class="piano-keys" onkeypress="KeysAnimation()">
-        <li id="keyS" class="key white d"><span>s</span></li>
-        <li id="keyE" class="key black w"><span>e</span></li>
-        <li id="keyD" class="key white f"><span>d</span></li>
-        <li id="keyR" class="key black e"><span>r</span></li>
-        <li id="keyF" class="key white g"><span>f</span></li>
-        <li id="keyG" class="key white h"><span>g</span></li>
-        <li id="keyY" class="key black r"><span>y</span></li>
-        <li id="keyH" class="key white j"><span>h</span></li>
-        <li id="keyU" class="key black t"><span>u</span></li>
-        <li id="keyJ" class="key white k"><span>j</span></li>
-        <li id="keyI" class="key black y"><span>i</span></li>
-        <li id="keyK" class="key white l"><span>k</span></li>
-        <li id="keyL" class="key white c"><span>l</span></li>
-        <li id="keyO" class="key black u"><span>o</span></li>
-        <li id="keyC" class="key white v"><span>c</span></li>
-        <li id="keyP" class="key black i"><span>p</span></li>
-        <li id="keyV" class="key white b"><span>v</span></li>
-      </ul>
 
-     <!-- <audio data-key="68" src="note/C.wav"></audio>
-      <audio data-key="87" src="note/C#.wav"></audio>
-      <audio data-key="70" src="note/D.wav"></audio>
-      <audio data-key="69" src="note/D#.wav"></audio>
-      <audio data-key="71" src="note/E.wav"></audio>
-      <audio data-key="72" src="note/F.wav"></audio>
-      <audio data-key="82" src="note/F#.wav"></audio>
-      <audio data-key="74" src="note/G.wav"></audio>
-      <audio data-key="84" src="note/G#.wav"></audio>
-      <audio data-key="75" src="note/A.wav"></audio>
-      <audio data-key="89" src="note/A#.wav"></audio>
-      <audio data-key="76" src="note/B.wav"></audio>
-      <audio data-key="67" src="note/C5.wav"></audio>
-      <audio data-key="85" src="note/C#5.wav"></audio>
-      <audio data-key="86" src="note/D5.wav"></audio>
-      <audio data-key="73" src="note/D#5.wav"></audio>
-      <audio data-key="66"src="note/E5.wav"></audio> -->
+
+        <div class="nowplaying">
+          <div class="bpm1">
+            <!-- <audio id="click">
+              <source src="note/pippo.mp3" type="audio/mpeg">
+            </audio> --> 
+            
+            <!-- <div class="metronome">
+              
+              <div class="click">
+                  
+                  <i class="fa-light fa-triangle-instrument fa-flip" style="color: #ffffff;"></i>
+                  
+              </div>
+              <div class="bpm">
+                
+                <button class="min">-</button>
+                <input type="number" class="bpm-input" value="120" min="20" max="300">
+                
+                <button class="max">+</button>
+                <button class="start">Start</button>
+                <button class="stop" style="display:none;">Stop</button>
+              </div>
+            </div> -->
+
+            <div class="metronome">
+              <div class="click">
+                <i class="fa-light fa-triangle-instrument fa-flip" style="color: #ffffff;"></i>
+              </div>
+              <div class="bpm">
+                <button class="min">-</button>
+                <input type="number" class="bpm-input" value="120" min="20" max="300">
+                <p class="bpm-text">BPM</h6>
+                <button class="max">+</button>
+                <button class="start">Start</button>
+                <button class="stop" style="display:none;">Stop</button>
+              </div>
+            </div>
+            
+            
+              
+          
+            
+      
+          </div>
+          <div class="imageSongDiv">
+            <img id="preview-image">
+            <input type="file" id="file-input" accept="image/*" style="display:none;">
+          </div>
+          </body>
+        <!-- partial -->
+          <script  src="script.js"></script>
+        </div>
+        <ul class="piano-keys" onkeypress="KeysAnimation()">
+          <li id="keyS" class="key white d"><span>s</span></li>
+          <li id="keyE" class="key black w"><span>e</span></li>
+          <li id="keyD" class="key white f"><span>d</span></li>
+          <li id="keyR" class="key black e"><span>r</span></li>
+          <li id="keyF" class="key white g"><span>f</span></li>
+          <li id="keyG" class="key white h"><span>g</span></li>
+          <li id="keyY" class="key black r"><span>y</span></li>
+          <li id="keyH" class="key white j"><span>h</span></li>
+          <li id="keyU" class="key black t"><span>u</span></li>
+          <li id="keyJ" class="key white k"><span>j</span></li>
+          <li id="keyI" class="key black y"><span>i</span></li>
+          <li id="keyK" class="key white l"><span>k</span></li>
+          <li id="keyL" class="key white c"><span>l</span></li>
+          <li id="keyO" class="key black u"><span>o</span></li>
+          <li id="keyC" class="key white v"><span>c</span></li>
+          <li id="keyP" class="key black i"><span>p</span></li>
+          <li id="keyV" class="key white b"><span>v</span></li>
+        </ul>
+
+      <!-- <audio data-key="68" src="note/C.wav"></audio>
+        <audio data-key="87" src="note/C#.wav"></audio>
+        <audio data-key="70" src="note/D.wav"></audio>
+        <audio data-key="69" src="note/D#.wav"></audio>
+        <audio data-key="71" src="note/E.wav"></audio>
+        <audio data-key="72" src="note/F.wav"></audio>
+        <audio data-key="82" src="note/F#.wav"></audio>
+        <audio data-key="74" src="note/G.wav"></audio>
+        <audio data-key="84" src="note/G#.wav"></audio>
+        <audio data-key="75" src="note/A.wav"></audio>
+        <audio data-key="89" src="note/A#.wav"></audio>
+        <audio data-key="76" src="note/B.wav"></audio>
+        <audio data-key="67" src="note/C5.wav"></audio>
+        <audio data-key="85" src="note/C#5.wav"></audio>
+        <audio data-key="86" src="note/D5.wav"></audio>
+        <audio data-key="73" src="note/D#5.wav"></audio>
+        <audio data-key="66"src="note/E5.wav"></audio> -->
+
+      
+        </section>
+    </section>
 
     
-      </section>
-  </section>
 
-  
-
-</body>
-</html>
+  </body>
+  </html>

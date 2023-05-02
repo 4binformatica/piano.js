@@ -180,83 +180,16 @@ function getNote(key) {
   return note;
 }
 
-/* function getNoteById(id) {
-  let note = "N/A";
-  console.log(id);
-  switch (id) {
-    case "keyS":
-      note = "C";
-      break;
-    case "keyE":
-      note = "C" + "#";
-      break;
-    case "keyD":
-      note = "D";
-      break;
-    case "keyR":
-      note = "D" + "#";
-      break;
-    case "keyF":
-      note = "E";
-      break;
-    case "keyG":
-      note = "F";
-      break;
-    case "keyY":
-      note = "F" + "#";
-      break;
-    case "keyH":
-      note = "G";
-      break;
-    case "keyU":
-      note = "G" + "#";
-      break;
-    case "keyJ":
-      note = "A";
-      break;
-    case "keyI":
-      note = "A" + "#";
-      break;
-    case "keyK":
-      note = "B";
-      break;
-    case "keyL":
-      note = synths.triggerAttack(`C${current_section + 1}`, "1");
-      synths.triggerRelease();
-      break;
-    case "keyO":
-      note = "C" + "#";
-      note = synths.triggerAttack(`${note}${current_section + 1}`, "1");
-      synths.triggerRelease();
-      break;
-    case "keyC":
-      note = synths.triggerAttack(`D${current_section + 1}`, "1");
-      synths.triggerRelease();
-      break;
-    case "keyP":
-      note = "D" + "#";
-      note = synths.triggerAttack(`D#${current_section + 1}`, "1");
-      synths.triggerRelease();
-      break;
-    case "keyV":
-      note = synths.triggerAttack(`E${current_section + 1}`, "1");
-      synths.triggerRelease();
-      break;
-  }
-  return note;
-} */
-
-
 //animation keys
 function KeysAnimation(){
   animateWhiteKeys();
   animateBlackKeys();
 }
 function animateWhiteKeys() {
-  const element = document.querySelectorAll(white);
-  element.classList.add("playing");
+  const element = document.getElementById("#KeyS");
+  element.classList.add(".playing");
   setTimeout(() => {
-    element.classList.remove("playing");
+    element.classList.remove(".playing");
   }, 100);
 }
 
@@ -265,96 +198,69 @@ function animateBlackKeys() {
 
 //Metronome Sound
 
-/* const bpmValue = document.querySelector('.value');
-const minButton = document.querySelector('.min');
-const maxButton = document.querySelector('.max');
-let bpm = parseInt(bpmValue.textContent);
 
-const clickSound = new Tone.MembraneSynth().toDestination();
-const loop = new Tone.Loop((time) => {
-  clickSound.triggerAttackRelease('C2', '8n', time);
-}, '4n').start(0);
-
-document.querySelector('.start').addEventListener('click', () => {
-  const intervalMs = 60000 / bpm;
-
-  loop.interval = intervalMs / 1000;
-
-  Tone.Transport.start();
-
-  document.querySelector('.start').style.display = 'none';
-  document.querySelector('.stop').style.display = 'block';
-});
-
-document.querySelector('.stop').addEventListener('click', () => {
-  Tone.Transport.stop();
-
-  document.querySelector('.start').style.display = 'block';
-  document.querySelector('.stop').style.display = 'none';
-});
-
-minButton.addEventListener('click', () => {
-  bpm--;
-  if (bpm < parseInt(bpmValue.min)) {
-    bpm = parseInt(bpmValue.min);
-  }
-  bpmValue.textContent = bpm;
-});
-
-maxButton.addEventListener('click', () => {
-  bpm++;
-  if (bpm > parseInt(bpmValue.max)) {
-    bpm = parseInt(bpmValue.max);
-  }
-  bpmValue.textContent = bpm;
-}); */
-
-
-const audio = new Audio('note/topolino.mp3');
+const clickSound = new Audio('note/topolino.mp3');
 let interval;
-
-const bpmValue = document.querySelector('.value');
+let bpm = 120;
+          
+const bpmInput = document.querySelector('.bpm-input');
 const minButton = document.querySelector('.min');
 const maxButton = document.querySelector('.max');
-let bpm = parseInt(bpmValue.textContent);
-
-document.querySelector('.start').addEventListener('click', () => {
+const startButton = document.querySelector('.start');
+const stopButton = document.querySelector('.stop');
+          
+function startMetronome() {
   const intervalMs = 60000 / bpm;
-
+          
+  clickSound.currentTime = 0;
+  clickSound.play();
+          
   interval = setInterval(() => {
-    audio.currentTime = 0;
-    audio.play();
+    clickSound.currentTime = 0;
+    clickSound.play();
   }, intervalMs);
-
-  document.querySelector('.start').style.display = 'none';
-  document.querySelector('.stop').style.display = 'block';
-});
-
-document.querySelector('.stop').addEventListener('click', () => {
+          
+  startButton.style.display = 'none';
+  stopButton.style.display = 'block';
+}
+          
+function stopMetronome() {
   clearInterval(interval);
-
-  audio.pause();
-  audio.currentTime = 0;
-
-  document.querySelector('.start').style.display = 'block';
-  document.querySelector('.stop').style.display = 'none';
+  clickSound.pause();
+          
+  startButton.style.display = 'block';
+  stopButton.style.display = 'none';
+}
+          
+function updateBPM(value) {
+  bpm = value;
+  bpmInput.value = bpm;
+}
+          
+bpmInput.addEventListener('input', (event) => {
+  updateBPM(event.target.value);
 });
-
+          
 minButton.addEventListener('click', () => {
-  bpm--;
-  if (bpm < parseInt(bpmValue.min)) {
-    bpm = parseInt(bpmValue.min);
+  if (bpm > 20) {
+    updateBPM(bpm - 1);
   }
-  bpmValue.textContent = bpm;
+});
+          
+maxButton.addEventListener('click', () => {
+  if (bpm < 300) {
+    updateBPM(bpm + 1);
+  }
+});
+          
+startButton.addEventListener('click', () => {
+  startMetronome();
+});
+          
+stopButton.addEventListener('click', () => {
+  stopMetronome();
 });
 
-maxButton.addEventListener('click', () => {
-  bpm++;
-  if (bpm > parseInt(bpmValue.max)) {
-    bpm = parseInt(bpmValue.max);
-  }
-  bpmValue.textContent = bpm;
-});
 
 //image preview
 const fileInput = document.getElementById('file-input');
