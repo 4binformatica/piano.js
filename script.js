@@ -181,12 +181,12 @@ function getNote(key) {
 }
 
 //animation keys
-function KeysAnimation(){
+/* function KeysAnimation(){
   animateWhiteKeys();
   animateBlackKeys();
 }
 function animateWhiteKeys() {
-  const element = document.getElementById("#KeyS");
+  const element = document.getElementById("KeyS");
   element.classList.add(".playing");
   setTimeout(() => {
     element.classList.remove(".playing");
@@ -194,11 +194,9 @@ function animateWhiteKeys() {
 }
 
 function animateBlackKeys() {
-}
+} */
 
 //Metronome Sound
-
-
 const clickSound = new Audio('note/topolino.mp3');
 let interval;
 let bpm = 120;
